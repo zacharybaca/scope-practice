@@ -21,11 +21,13 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 function interrupter(interruptingWord) {
     return (interruptions) => {
         interruptions = interruptions.split(" ");
-        let newWord = '';
+        let newWord = [];
         for (let i = 0; i < interruptions.length; i++) {
-            newWord += ' ' + interruptions[i] + ' ' + interruptingWord
+            newWord.push(interruptions[i]);
+            newWord.push(interruptingWord);
         }
-        return newWord;
+        newWord.pop()
+        return newWord.join(" ");
     }
 }
 
