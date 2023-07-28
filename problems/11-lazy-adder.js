@@ -23,7 +23,14 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // Your code here
-
+function lazyAdder(firstNum) {
+  return function(secondNum) {
+    return function(thirdNum) {
+      let total = firstNum + secondNum + thirdNum;
+      return total;
+    }
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

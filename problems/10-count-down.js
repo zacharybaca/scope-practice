@@ -30,6 +30,34 @@ Example 4:
 
 // Your code here
 
+function countDownTimer(n) {
+  let count = n;
+  if (count >= 0) {
+    return function decrementer() {
+      count--;
+      if(count <= 0) {
+        return "Happy New Year!"
+      } return decrementer
+    }
+  } else return "Happy New Year!"
+}
+
+
+
+//Example 2:
+  let oneDay = countDownTimer(1); // returns a function
+  console.log(oneDay()); // prints "Happy New Year!"
+
+//Example 3:
+  let twoDays = countDownTimer(2); // returns a function
+  console.log(twoDays()); // returns a function
+  console.log(twoDays()); // prints "Happy New Year!"
+
+//Example 4:
+  let threeDays = countDownTimer(3); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

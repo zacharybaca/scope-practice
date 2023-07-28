@@ -14,6 +14,22 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
+function recVolume(height) {
+  let volumeArr = [];
+  volumeArr.push(height);
+  return function dimensions(widthOrLength) {
+    if (volumeArr.length < 3) {
+      volumeArr.push(widthOrLength);
+    }
+    return volumeArr.reduce((acc, currVal) => acc *= currVal, 1)
+  }
+}
+let height = recVolume(12);
+console.log(height(12));
+console.log(height(12));
+console.log(height(12));
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
